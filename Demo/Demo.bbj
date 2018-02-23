@@ -1,0 +1,33 @@
+use ::BBjWinBusyIndicator/BBjWinBusyIndicator.bbj::BBjWinBusyIndicator
+
+? 'HIDE'
+
+sg! = BBjAPI().openSysGui("X0")
+wnd! = sg!.addWindow(10,10,800,600,"DEMO")
+
+btn! = wnd!.addButton(100,200,200,400,55,"make me busy...")
+btn!.setCallback(BBjAPI.ON_BUTTON_PUSH,"busy")
+
+wnd!.setCallback(BBjAPI.ON_CLOSE,"byebye")
+
+bi! = new BBjWinBusyIndicator(wnd!)
+
+
+process_events
+
+busy:
+
+        bi!.setText("Processing...")
+        bi!.setVisible(1)
+        
+        for i=5 to 0 step -1
+            wait 1
+            bi!.setText("Processing "+str(i))
+        next
+
+        bi!.setVisible(0)
+return
+
+byebye:
+    bye
+    

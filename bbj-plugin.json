@@ -1,0 +1,7 @@
+{
+	"name":"BBjWinBusyIndicator",
+	"description":"A Busy Indicator for a BBj Window",
+	"version": "0.1",
+	"author":"Basis",
+	"plugin_dependencies": []
+}
