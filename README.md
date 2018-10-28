@@ -1,2 +1,1 @@
-# BBjBusyIndicator
-A busy indicator that overlays a BBjWindow to indicate that something is busy
+A busy indicator that overlays a BBjWindow to indicate that something is busy. It will put a semi-opaque glass pane in front of a BBjWindow. Works in GUI and in BUI.
